@@ -57,3 +57,37 @@ router.get("/blog/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Post Comment on a blog post
+router.post("/api/blog/:id", withAuth, async (req, res) => {
+  try {
+    // retrieve the user.id from username
+    const dbUserData = await User.findOne({
+      where: {
+        username: req.session.username,
+      },
+    });
+
+    if (dbUserData.id) {
+      try {
+        const dbCommentData = await Comment.create({
+          blog_id: req.params.id,
+          description: req.body.comment,
+          user_id: dbUserData.id,
+        });
+        req.session.save(() => {
+          req.session.loggedIn = true;
+          req.session.username = req.session.username;
+
+          res.status(200).json(dbCommentData);
+        });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
