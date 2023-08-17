@@ -195,3 +195,37 @@ router.delete("/myblog/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// PUT update the blog post
+router.put("/myblog/:id", withAuth, async (req, res) => {
+  try {
+    const dbBlogData = await Blog.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!dbBlogData[0]) {
+      res.status(404).json({ message: "No Blog with this id!" });
+      return;
+    }
+    res.status(200).json(dbBlogData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Login
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
+});
+
+// Signup
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
+module.exports = router;
