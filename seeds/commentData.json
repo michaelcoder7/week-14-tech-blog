@@ -22,5 +22,29 @@
         "description": "Could you please recommend a good online resource to learn more?",
         "blog_id": 3,
         "user_id": 4
+    },
+    {
+        "id": 5,
+        "description": "I learned a lot. Thank you!",
+        "blog_id": 4,
+        "user_id": 4
+    },
+    {
+        "id": 6,        
+        "description": "Thank you for sharing such insightful and helpful information. Thank you!",
+        "blog_id": 5,
+        "user_id": 1
+    },
+    {
+        "id": 7,        
+        "description": "Could you please elaborate more about the backend, by doing more posts? Thanks in advance!",
+        "blog_id": 6,
+        "user_id": 2
+    },
+    {
+        "id": 8,        
+        "description": "Great post! You helped increase my full stack development knowlege.",
+        "blog_id": 7,
+        "user_id": 3
     }
 ]
