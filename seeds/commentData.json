@@ -8,31 +8,31 @@
     {
         "id": 2,
         "description": "Great post!!!! Look forward to more!!!",
-        "blog_id": 1,
+        "blog_id": 2,
         "user_id": 3
     },
     {
         "id": 3,
         "description": "Well explained and broken down. Thanks mate!",
-        "blog_id": 2,
+        "blog_id": 3,
         "user_id": 1
     },
     {
         "id": 4,
         "description": "Could you please recommend a good online resource to learn more?",
-        "blog_id": 3,
+        "blog_id": 4,
         "user_id": 4
     },
     {
         "id": 5,
         "description": "I learned a lot. Thank you!",
-        "blog_id": 4,
+        "blog_id": 5,
         "user_id": 4
     },
     {
         "id": 6,        
         "description": "Thank you for sharing such insightful and helpful information. Thank you!",
-        "blog_id": 5,
+        "blog_id": 7,
         "user_id": 1
     },
     {
