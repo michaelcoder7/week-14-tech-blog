@@ -177,3 +177,21 @@ router.get("/myblog/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// DELETE a blog post (can only do so by post creator)
+router.delete("/myblog/:id", withAuth, async (req, res) => {
+  try {
+    const dbBlogData = await Blog.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!dbBlogData) {
+      res.status(404).json({ message: "No Blog found with that id!" });
+      return;
+    }
+    res.status(200).json(dbBlogData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
