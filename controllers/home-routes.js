@@ -159,3 +159,21 @@ router.post("/dashboard", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// GET one Blog Post, own blog post
+router.get("/myblog/:id", withAuth, async (req, res) => {
+  try {
+    const dbBlogData = await Blog.findByPk(req.params.id);
+
+    if (dbBlogData) {
+      const blog = dbBlogData.get({ plain: true });
+      res.render("myblog", { blog, loggedIn: req.session.loggedIn });
+    } else {
+      res.status(404).json({ message: "No Blog found with that id!" });
+      return;
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
