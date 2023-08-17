@@ -28,3 +28,5 @@ const submitBlogHandler = async (event) => {
     }
   }
 };
+
+document.querySelector("#create").addEventListener("submit", submitBlogHandler);
