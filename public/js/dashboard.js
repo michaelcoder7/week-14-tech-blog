@@ -16,8 +16,7 @@ const submitBlogHandler = async (event) => {
       method: "POST",
       body: JSON.stringify({
         title: title,
-        description,
-        description,
+        description: description,
       }),
       headers: { "Content-Type": "application/json" },
     });
