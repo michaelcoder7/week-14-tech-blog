@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "The Beginners Guide to JavaScript",
+        "description": "This blog post introduces the basics of JavaScript and how to get started.",
+        "user_id": 1
+      },
+      {
+        "id": 2,
+        "title": "The Beginners Guide to Node.js",
+        "description": "This blog post introduces the basics of Node.js and its relationship with Vanilla JavaScript.",
+        "user_id": 2
+      },
+      {
+        "id": 3,
+        "title": "The Beginners Guide to Express.js",
+        "description": "This blog post introduces the basics of Express.js and how it relates with Node.js and Vanilla JavaScript.",
+        "user_id": 3
+      }
+]
