@@ -125,3 +125,37 @@ router.get("/dashboard", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Create Blog Post
+router.post("/dashboard", withAuth, async (req, res) => {
+  try {
+    // retrieve the user.id from username
+    const dbUserData = await User.findOne({
+      where: {
+        username: req.session.username,
+      },
+    });
+
+    if (dbUserData.id) {
+      try {
+        const dbBlogData = await Blog.create({
+          title: req.body.title,
+          description: req.body.description,
+          user_id: dbUserData.id,
+        });
+        req.session.save(() => {
+          req.session.loggedIn = true;
+          req.session.username = req.session.username;
+
+          res.status(200).json(dbBlogData);
+        });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
