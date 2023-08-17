@@ -43,3 +43,11 @@ const submitDeleteHandler = async (event) => {
     alert("Failed to delete blog.");
   }
 };
+
+document
+  .getElementById("updatepost")
+  .addEventListener("click", submitUpdateHandler);
+
+document
+  .getElementById("delete")
+  .addEventListener("click", submitDeleteHandler);
