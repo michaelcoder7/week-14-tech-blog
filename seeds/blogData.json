@@ -16,5 +16,29 @@
         "title": "The Beginners Guide to Express.js",
         "description": "This blog post introduces the basics of Express.js and how it relates with Node.js and Vanilla JavaScript.",
         "user_id": 3
+      },
+      {
+        "id": 4,
+        "title": "Beginners Guide to Computer Science Principles",
+        "description": "In this blog post, we will learn about the foundational and basic principles of Computer Science.",
+        "user_id": 4
+      },
+      {
+        "id": 5,    
+        "title": "Elaborating on the Frontend of web development for beginners",
+        "description": "In this blog post, we will explore the fundamentals and functionalities of the Front end side of web development .",
+        "user_id": 1
+      },
+      {
+        "id": 6,    
+        "title": "Introduction to Backend Technologies for Full Stack Development",
+        "description": "In this blog post, we will learn about some popular backend technologies used in full stack development.",
+        "user_id": 2
+      },
+      {
+        "id": 7,    
+        "title": "Introduction to Full Stack Development",
+        "description": "In this blog post, we will explore the fundamentals of full stack development and its importance in modern web development.",
+        "user_id": 3
       }
 ]
