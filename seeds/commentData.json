@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "description": "This is really informative. Thank you for sharing.",
+        "blog_id": 1,
+        "user_id": 2
+    },
+    {
+        "id": 2,
+        "description": "Great post!!!! Look forward to more!!!",
+        "blog_id": 1,
+        "user_id": 3
+    },
+    {
+        "id": 3,
+        "description": "Well explained and broken down. Thanks mate!",
+        "blog_id": 2,
+        "user_id": 1
+    },
+    {
+        "id": 4,
+        "description": "Could you please recommend a good online resource to learn more?",
+        "blog_id": 3,
+        "user_id": 4
+    }
+]
