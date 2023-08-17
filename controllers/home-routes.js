@@ -91,3 +91,37 @@ router.post("/api/blog/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Dashboard
+router.get("/dashboard", withAuth, async (req, res) => {
+  try {
+    // find  the user.id from username
+    const dbUserData = await User.findOne({
+      where: {
+        username: req.session.username,
+      },
+    });
+
+    if (dbUserData.id) {
+      try {
+        const dbBlogData = await Blog.findAll({
+          where: {
+            user_id: dbUserData.id,
+          },
+          order: [["createdAt", "DESC"]],
+        });
+        let blogs = {};
+        if (dbBlogData) {
+          blogs = dbBlogData.map((blog) => blog.get({ plain: true }));
+        }
+        res.render("dashboard", { blogs, loggedIn: req.session.loggedIn });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
