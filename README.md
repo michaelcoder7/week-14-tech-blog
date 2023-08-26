@@ -49,9 +49,15 @@ Package-lock.json and package.json files were generated
 
 Necessary extra files created and linked together for functionality
 
+App deployed onto Heroku and all data seeded unto the platform
+
 ## Screenshot of Web Application Login Page
 
+![tech-blog-login-page-screenshot](https://github.com/michaelcoder7/week-14-tech-blog/assets/128432461/35d67463-0ec3-46b7-9b46-4f0daaa443f6)
+
 ## Screenshot of Web Application Home Page
+
+![tech-blog-screenshot](https://github.com/michaelcoder7/week-14-tech-blog/assets/128432461/b11cccad-3a94-43c3-b012-9ebddd498bc4)
 
 ## Link to deployed application
 
