@@ -10,13 +10,13 @@ body {
 header {
   padding: 20px;
   text-align: center;
-  background: #13293d;
+  background: #9900ff;
   color: #fff;
 }
 
 nav {
   display: flex;
-  background: #13293d;
+  background: #9900ff;
 }
 
 nav a {
@@ -65,7 +65,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #13293d; /* Background color for the header */
+  background-color: #9900ff; /* Background color for the header */
   color: #fff; /* Font color for the header */
   padding: 10px;
 }
@@ -134,7 +134,7 @@ section {
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #13293d;
+  background-color: #9900ff;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -158,7 +158,7 @@ a {
 
 /* on hover: add underline*/
 .card a:hover {
-  color: green;
+  color: #0046c2;
   text-decoration: underline;
 }
 
