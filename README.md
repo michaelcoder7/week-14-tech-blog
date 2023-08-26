@@ -2,7 +2,8 @@
 
 ## Project Description
 
-This is a technology blog for full stack technology. It is a CMS-style blog site, where developers can publish their blog posts and comment on other developers’ posts as well.
+This is a technology blog for full stack technology. It is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.<br>
+This app follows the MVC paradigm for its architectural structure and is deployed onto the Heroku platform.<br> It was also made using Handlebars.js as the templating language, Sequelize as the ORM, and the Express.js for backend.
 
 ## Acceptance Criteria
 
@@ -48,7 +49,9 @@ Package-lock.json and package.json files were generated
 
 Necessary extra files created and linked together for functionality
 
-## Screenshot of Web Application
+## Screenshot of Web Application Login Page
+
+## Screenshot of Web Application Home Page
 
 ## Link to deployed application
 
